@@ -1,3 +1,3 @@
 module.exports  = {
-	baseUrl: '/v4',
+	baseUrl: '/ddc',
 }
