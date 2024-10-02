@@ -1,6 +1,6 @@
 FROM node:10-alpine
-RUN mkdir -p /tmp/ddc-app/node_modules && chown -R node:node /tmp/ddc-app
-WORKDIR /tmp/ddc-app
+RUN mkdir -p /ddc/node_modules && chown -R node:node /ddc
+WORKDIR /ddc
 COPY package*.json ./
 USER node
 RUN npm install prod
