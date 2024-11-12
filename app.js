@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/more', express.static(path.join(__dirname, 'public')));
+app.use('/ddc', express.static(path.join(__dirname, 'public')));
 
 app.use('/ddc/', indexRouter);
 app.use('/ddc/viewer', viewerRouter);
