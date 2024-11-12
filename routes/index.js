@@ -7,13 +7,16 @@ router.get('/', function(req, res, next) {
 });
 
 
-// 
+// report viewer
 router.param('id', function (req, res, next, id) {
   next();
 });
 
 router.get('/viewer/:id', function (req, res) {
-  res.render('viewer', { title: 'The Report Viewer' });
+  res.render('viewer', {
+    title: 'The Report Viewer',
+    reportId: req.id
+  });
 });
 
 module.exports = router;
