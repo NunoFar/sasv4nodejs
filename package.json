@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "@sassoftware/va-report-components": "^2.15.0",
     "bootstrap": "^5.3.3",
     "cookie-parser": "~1.4.7",
     "debug": "~4.3.7",

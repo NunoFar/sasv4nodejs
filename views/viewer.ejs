@@ -1,31 +1,16 @@
 <html>
   <head>
     <title><%= title %></title>
-        <script async src="https://unpkg.com/@sassoftware/va-report-components@1.5.0/dist/umd/va-report-components.js"></script>
-        <script>
-                localStorage.clear();
-                const urlParams = new URLSearchParams(window.location.search);
-                //var reportId = urlParams.get('id');
-                //if(!reportId) reportId = "63f22974-837a-447f-98c3-24a9c0faa458";
-
-                window.addEventListener('vaReportComponents.loaded', function() {
-                        const connectToServer = vaReportComponents.connectToServer;
-                        const myReport = new vaReportComponents.SASReportElement();
-                        myReport.url = 'https://bi.uq.pt/';
-                        myReport.reportUri = '/reports/reports/' + reportId;
-                        //myReport.reportUri = '/reports/reports/63f22974-837a-447f-98c3-24a9c0faa458';
-                        myReport.authenticationType = 'credentials';
-                        myReport.getReportHandle().then((reportHandle) => {
-                        reportHandle.setReportParameters({
-                                params: urlParams.get('parms'),
-                        });
-                        });
-
-                        document.body.appendChild(myReport);
-                        vaReportComponents.setLoadingTheme('light');
-                });
-        </script>
+        <script async src="https://cdn.developer.sas.com/packages/va-report-components/latest/dist/umd/va-report-components.js"></script>
   </head>
-  <body style="background-color:#ccfffb";></body>
+        <style>
+                .my-report {
+                        --sas-report-background-color: transparent;
+                        --sas-report-padding: 10px;
+                }
+        </style>
+  <body style="background-color:#ccfffb";>
+        <%=sastag%>
+  </body>
 
 </html>
