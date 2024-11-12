@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+import "@sassoftware/va-report-components"
+
 
 var indexRouter = require('./routes/index');
 
@@ -21,12 +23,12 @@ app.use(cookieParser());
 
 app.use(config.baseUrl, indexRouter);
 
+app.use('/static', express.static('public'))
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
-
-
 
 // error handler
 app.use(function(err, req, res, next) {

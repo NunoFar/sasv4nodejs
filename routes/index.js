@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Node SAS DDC' });
+  res.render('index', { title: 'SAS DDC' });
 });
 
 
@@ -16,8 +16,9 @@ router.param('id', function (req, res, next, id) {
 router.get('/viewer/:id', function (req, res) {
   res.render('viewer', {
     title: 'The Report Viewer',
-    sastag: '<sas-report url="https://bi.uq.pt" reportUri="/reports/reports/' + req.id +'" authenticationType="credentials" class="my-report" hideNavigation></sas-report>'
+    sastag: '<sas-report url="https://bi.uq.pt" reportUri="/reports/reports/' + req.params.id +'" authenticationType="credentials" class="my-report" hideNavigation></sas-report>'
   });
+
 });
 
 module.exports = router;
