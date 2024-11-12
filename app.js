@@ -23,7 +23,7 @@ app.use(cookieParser());
 
 app.use(config.baseUrl, indexRouter);
 
-app.use('/static', express.static('public'))
+app.use('/static', express.static('public'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
