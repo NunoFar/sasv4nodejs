@@ -19,8 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/v4/', indexRouter);
-app.use('/v4/viewer', viewerRouter);
+app.use('/', indexRouter);
+app.use('/viewer', viewerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
-  res.locals.message = err.message + " Path:" + __dirname;
+  res.locals.message = err.message + " | Path: " + path.join(__dirname, 'public');
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
