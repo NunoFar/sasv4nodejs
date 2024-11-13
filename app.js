@@ -3,11 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var viewerRouter = require('./routes/viewer');
 
 var app = express();
+
+// Use CORS middleware
+const corsOptions = {
+  origin: 'https://bi.uq.pt',//(https://your-client-app.com)
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
