@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET Report View */
-
 router.param('id', function (req, res, next, id) {
   next();
 });
