@@ -13,7 +13,7 @@ html
                         const connectToServer = vaReportComponents.connectToServer;
                         const myReport = new vaReportComponents.SASReportElement();
                         myReport.url = 'https://uqbi11.uq.pt/';
-                        myReport.reportUri = '/reports/reports/' + {sastag};
+                        myReport.reportUri = '/reports/reports/' + repoid;
                         myReport.authenticationType = 'credentials';
                         myReport.getReportHandle().then((reportHandle) => {
                         reportHandle.setReportParameters({
@@ -26,4 +26,4 @@ html
                 });
   body
     block content
-    #{sastag}
+
