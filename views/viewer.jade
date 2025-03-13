@@ -3,27 +3,6 @@ html
   head
     title= title
     script(async, src='https://cdn.developer.sas.com/packages/va-report-components/latest/dist/umd/va-report-components.js')
-    script.
-  localStorage.clear();
-                const urlParams = new URLSearchParams(window.location.search);
-                var reportId = urlParams.get('id');
-                //if(!reportId) reportId = "63f22974-837a-447f-98c3-24a9c0faa458";
-
-                window.addEventListener('vaReportComponents.loaded', function() {
-                        const connectToServer = vaReportComponents.connectToServer;
-                        const myReport = new vaReportComponents.SASReportElement();
-                        myReport.url = 'https://uqbi11.uq.pt/';
-                        myReport.reportUri = '/reports/reports/' + repoid;
-                        myReport.authenticationType = 'credentials';
-                        myReport.getReportHandle().then((reportHandle) => {
-                        reportHandle.setReportParameters({
-                                params: urlParams.get('parms'),
-                        });
-                        });
-
-                        document.body.appendChild(myReport);
-                        vaReportComponents.setLoadingTheme('light');
-                });
   body
     block content
-
+    #{sastag}
