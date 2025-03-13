@@ -13,7 +13,7 @@ router.param('id', function (req, res, next, id) {
 router.get('/viewer/:id', function (req, res, next) {
   res.render('viewer', {
     title: 'The Report Viewer',
-    sastag: '<sas-report url="https://uqbi11.uq.pt" reportUri="/reports/reports/' + req.params.id + '" authenticationType="credentials" class="my-report" hideNavigation></sas-report>',
+    sastag: '<sas-report url="https://uqbi11.uq.pt" reportUri="/reports/reports/' + req.params.id + '" authenticationType="credentials" class="my-report"></sas-report>',
     repoid: req.params.id
   });
 });
