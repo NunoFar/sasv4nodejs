@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/ddc', express.static(path.join(__dirname, 'public')));
+
 app.use('/ddc/', indexRouter);
 //app.use('/ddc/viewer', viewerRouter);
 
