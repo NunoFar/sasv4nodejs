@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
-    "cors": "^2.8.5",
     "debug": "latest",
     "ejs": "latest",
     "express": "latest",
