@@ -9,7 +9,6 @@
     "node": ">=26.0.0"
   },
   "dependencies": {
-    "cookie-parser": "latest",
     "debug": "latest",
     "ejs": "latest",
     "express": "latest",
