@@ -1,4 +1,4 @@
-FROM node:alpine3.23
+FROM node:22-alpine
 RUN mkdir -p /ddc/node_modules && chown -R node:node /ddc
 WORKDIR /ddc
 COPY package*.json ./
