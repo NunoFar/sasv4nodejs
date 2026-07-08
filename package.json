@@ -11,10 +11,8 @@
   "dependencies": {
     "cookie-parser": "latest",
     "debug": "latest",
-    "ejs": "latest",
     "express": "latest",
     "http-errors": "latest",
-    "morgan": "^1.11.0",
-    "pug": "3.0.4"
+    "morgan": "^1.11.0"
   }
 }
