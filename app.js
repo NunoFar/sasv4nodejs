@@ -18,10 +18,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/ddc', express.static(path.join(__dirname, 'public')));
+app.use('/v4', express.static(path.join(__dirname, 'public')));
 
-app.use('/ddc/', indexRouter);
-app.use('/ddc/viewer', viewerRouter);
+app.use('/v4/', indexRouter);
+app.use('/v4/viewer', viewerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
