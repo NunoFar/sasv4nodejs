@@ -14,7 +14,7 @@
     "ejs": "latest",
     "express": "latest",
     "http-errors": "latest",
-    "morgan": "latest",
+    "morgan": "^1.11.0",
     "pug": "3.0.4"
   }
 }
