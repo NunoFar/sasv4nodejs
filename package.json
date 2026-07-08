@@ -9,12 +9,12 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
+    "cookie-parser": "latest",
     "debug": "latest",
     "ejs": "latest",
     "express": "latest",
     "http-errors": "latest",
-    "morgan": "~1.9.1",
-    "pug": "3.0.2"
+    "morgan": "latest",
+    "pug": "3.0.4"
   }
 }
